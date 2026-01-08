@@ -43,7 +43,7 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 
 ### 1. Connexion à AWS Learner Lab
 
-![Connexion AWS Learner Lab](media/image2.png)
+![Connexion AWS Learner Lab](images/Aws_console.png)
 
 *Accès à l'environnement AWS Learner Lab pour le déploiement de l'infrastructure*
 
@@ -56,25 +56,25 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 - **Nom du VPC** : `workshop`
 - **CIDR** : `10.0.0.0/16`
 
-![Création du VPC](media/image3.png)
+![Création du VPC](images/creation_vpc.png)
 
 ![Configuration VPC](media/image4.png)
 
 #### Création réussie du VPC
 
-![VPC créé avec succès](media/image5.png)
+![VPC créé avec succès](images/config_vpc.png)
 
 #### Configuration du Subnet
 
-![Configuration Subnet](media/image6.png)
+![Configuration Subnet](images/Configuration_Subnet.png)
 
 #### Table de Routes
 
-![Table de Routes](media/image7.png)
+![Table de Routes](images/Table_Routes.png)
 
 #### Passerelle Internet
 
-![Internet Gateway attachée au VPC](media/image8.png)
+![Internet Gateway attachée au VPC](images/Passerelle_Internet.png)
 
 ---
 
@@ -91,9 +91,9 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 **Règles Sortantes** :
 - Tout le trafic vers toutes les IPs
 
-![Configuration SG-Clients](media/image10.png)
+![Configuration SG-Clients](images/SG-Clients.png)
 
-![SG-Clients créé avec succès](media/image11.png)
+![SG-Clients créé avec succès](images/SG-Clients_succes.png)
 
 #### Security Group pour Wazuh Server (SG-Wazuh-Server)
 
@@ -106,15 +106,15 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 **Règles Sortantes** :
 - Tout le trafic vers toutes les IPs
 
-![Configuration SG-Wazuh-Server](media/image12.png)
+![Configuration SG-Wazuh-Server](images/SG_Wazuh_Server.png)
 
-![SG-Wazuh-Server créé avec succès](media/image13.png)
+![SG-Wazuh-Server créé avec succès](images/SG_Wazuh_Server_succes.png)
 
 ---
 
 ### 4. Création des instances EC2
 
-![Lancement d'instance EC2](media/image14.png)
+![Lancement d'instance EC2](images/Lancement_instance.png)
 
 #### Instance Wazuh-Server
 
@@ -123,23 +123,22 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 - **Type** : t3.large (recommandé)
 - **Stockage** : 30 GB
 
-![Configuration Wazuh-Server](media/image15.png)
+![Configuration Wazuh-Server](images/Configuration_Wazuh-Server.png)
 
 ##### Création de la paire de clés
 
-![Création paire de clés Wazuh](media/image16.png)
+![Création paire de clés Wazuh](images/Création_paire_clés_Wazuh.png)
 
-![Paire de clés créée](media/image17.png)
+![Paire de clés créée](images/Paire_clés_créée.png)
 
 ##### Configuration réseau
 
-![Configuration réseau Wazuh-Server](media/image18.png)
+![Configuration réseau Wazuh-Server](images/Configuration_réseau_Wazuh-Server.png)
 
-![Paramètres réseau finaux](media/image19.png)
 
 ##### Lancement de l'instance
 
-![Instance Wazuh-Server lancée](media/image20.png)
+![Instance Wazuh-Server lancée](images/Instance_Wazuh-Server_lancée.png)
 
 ---
 
@@ -149,11 +148,13 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 - **OS** : Ubuntu 22.04
 - **Type** : t3.micro
 
-![Configuration Linux-Client](media/image21.png)
+![Configuration Linux-Client](images/ConfigurationLinux-Client.png)
+
+![Configuration Linux-Client](images/ConfigurationLinux-Client2.png)
 
 ##### Création de la paire de clés
 
-![Paire de clés Linux-Client](media/image22.png)
+![Paire de clés Linux-Client](images/Paire_clés_Linux-Client.png)
 
 ![Clés créées](media/image23.png)
 
