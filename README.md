@@ -58,11 +58,11 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 
 ![Création du VPC](images/creation_vpc.png)
 
-![Configuration VPC](media/image4.png)
+![Configuration VPC](images/config_vpc.png)
 
 #### Création réussie du VPC
 
-![VPC créé avec succès](images/config_vpc.png)
+![VPC créé avec succès](images/creation_vpc_succes.png)
 
 #### Configuration du Subnet
 
@@ -80,7 +80,7 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 
 ### 3. Création des Security Groups
 
-![Accès aux Security Groups](media/image9.png)
+![Accès aux Security Groups](images/security_group.png)
 
 #### Security Group pour les Clients (SG-Clients)
 
@@ -148,25 +148,20 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 - **OS** : Ubuntu 22.04
 - **Type** : t3.micro
 
-![Configuration Linux-Client](images/ConfigurationLinux-Client.png)
+![Configuration Linux-Client](images/Configuration_Linux-Client.png)
 
-![Configuration Linux-Client](images/ConfigurationLinux-Client2.png)
+![Configuration Linux-Client](images/Configuration_Linux-Client2.png)
 
 ##### Création de la paire de clés
 
 ![Paire de clés Linux-Client](images/Paire_clés_Linux-Client.png)
 
-![Clés créées](media/image23.png)
 
 ##### Configuration réseau
 
-![Réseau Linux-Client](media/image24.png)
+![Réseau Linux-Client](images/RéseauLinux-Client.png)
 
-##### Lancement
 
-![Linux-Client lancé](media/image25.png)
-
-![Confirmation lancement](media/image26.png)
 
 ---
 
@@ -175,29 +170,28 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 **Spécifications** :
 - **OS** : Windows Server
 
-![Configuration Windows-Client](media/image27.png)
+![Configuration Windows-Client](images/image27.png)
 
 ##### Création de la paire de clés
 
-![Paire de clés Windows](media/image28.png)
+![Paire de clés Windows](images/Paire_clés_Windows.png)
 
-![Clés Windows créées](media/image29.png)
 
 ##### Configuration réseau
 
-![Réseau Windows-Client](media/image30.png)
+![Réseau Windows-Client](images/Réseau_Windows-Client.png)
 
 ##### Lancement
 
-![Windows-Client lancé](media/image31.png)
+![Windows-Client lancé](images/Windows-Client_lancé.png)
 
-![Confirmation Windows](media/image32.png)
+![Confirmation Windows](image/Confirmation_Windows.png)
 
 ---
 
 #### Vue d'ensemble des trois instances
 
-![Les trois instances EC2 déployées](media/image33.png)
+![Les trois instances EC2 déployées](images/Trois_instances_EC2_déployées.png)
 
 ---
 
@@ -205,9 +199,9 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 
 ### 1. Connexion SSH au serveur Wazuh
 
-![Connexion SSH Wazuh](media/image34.png)
+![Connexion SSH Wazuh](images/Connexio_SSH_Wazuh.png)
 
-![Terminal SSH connecté](media/image35.png)
+![Terminal SSH connecté](images/Terminal_SSH_connecté.png)
 
 ---
 
@@ -217,9 +211,8 @@ Ce projet vise à mettre en œuvre une plateforme complète de supervision de la
 sudo apt update && sudo apt -y upgrade
 ```
 
-![Mise à jour des paquets](media/image36.png)
+![Mise à jour des paquets](images/MAJ_paquets.png)
 
-![Upgrade en cours](media/image37.png)
 
 ---
 
@@ -229,7 +222,7 @@ sudo apt update && sudo apt -y upgrade
 curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 ```
 
-![Téléchargement du script](media/image38.png)
+![Téléchargement du script](images/Téléchargement_script.png)
 
 #### Vérification du téléchargement
 
@@ -237,7 +230,7 @@ curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
 ls -lh wazuh-install.sh
 ```
 
-![Fichier téléchargé](media/image39.png)
+![Fichier téléchargé](images/Fichier_téléchargé.png)
 
 ---
 
@@ -247,9 +240,9 @@ ls -lh wazuh-install.sh
 sudo bash wazuh-install.sh --a
 ```
 
-![Installation Wazuh en cours](media/image40.png)
+![Installation Wazuh en cours](images/Installation_Wazuh_encours.png)
 
-![Installation complétée](media/image41.png)
+![Installation complétée](images/Installation_complété.png)
 
 #### 🔐 Identifiants générés
 
@@ -257,7 +250,7 @@ sudo bash wazuh-install.sh --a
 
 - **URL Dashboard** : `https://<wazuh-dashboard-ip>:443`
 - **User** : `admin`
-- **Password** : `QFsi?vvUedlsgXbupZ*RVaixAf5oYhN4`
+- **Password** : ``
 
 > ⚠️ **Important** : Ces credentials sont sauvegardés de manière sécurisée pour l'accès au dashboard.
 
@@ -271,7 +264,7 @@ sudo bash wazuh-install.sh --a
 sudo systemctl status wazuh-manager
 ```
 
-![Statut Wazuh Manager](media/image42.png)
+![Statut Wazuh Manager](images/Statut_Wazuh_Manager.png)
 
 ✅ Le service est **actif** et en fonctionnement depuis 28 minutes.
 
@@ -283,7 +276,7 @@ sudo systemctl status wazuh-manager
 sudo systemctl status wazuh-indexer
 ```
 
-![Statut Wazuh Indexer](media/image43.png)
+![Statut Wazuh Indexer](images/Statut_Wazuh_Indexer.png)
 
 ✅ Le service est actif et prêt à **indexer les événements** envoyés par les agents.
 
@@ -295,7 +288,7 @@ sudo systemctl status wazuh-indexer
 sudo systemctl status wazuh-dashboard
 ```
 
-![Statut Wazuh Dashboard](media/image44.png)
+![Statut Wazuh Dashboard](images/Statut_Wazuh_Dashboard.png)
 
 ✅ Le Dashboard est opérationnel et peut recevoir les connexions HTTPS depuis un navigateur.
 
@@ -305,19 +298,19 @@ sudo systemctl status wazuh-dashboard
 
 ### Connexion à l'interface Wazuh
 
-![Page de connexion Wazuh](media/image45.png)
+![Page de connexion Wazuh](images/Page_connexion_Wazuh.png)
 
-![Dashboard Wazuh](media/image46.png)
+![Dashboard Wazuh](images/Dashboard_Wazuh.png)
 
 ---
 
 ### Navigation vers la section Agents
 
-![Section Agents](media/image47.png)
+![Section Agents](images/Section_Agents.png)
 
-![Ajout d'agent](media/image48.png)
+![Ajout d'agent](images/Ajout_agent.png)
 
-![Configuration agent](media/image49.png)
+![Configuration agent](images/Configuration_agent.png)
 
 ---
 
@@ -331,11 +324,11 @@ sudo systemctl status wazuh-dashboard
 
 #### Correction effectuée :
 
-![Correction IP privée](media/image50.png)
+![Correction IP privée](images/Correction_IP_privée.png)
 
-![Configuration IP privée](media/image51.png)
+![Commandes d'installation](images/Commandes_installation.png)
+![Commandes d'installation](images/Commandes_installation2.png)
 
-![Commandes d'installation](media/image52.png)
 
 ---
 
@@ -343,9 +336,9 @@ sudo systemctl status wazuh-dashboard
 
 ### 1. Connexion SSH au Linux-Client
 
-![Connexion Linux-Client](media/image53.png)
+![Connexion Linux-Client](images/Connexion_Linux-Client.png)
 
-![Terminal Linux-Client](media/image54.png)
+![Terminal Linux-Client](images/Terminal_Linux-Client.png)
 
 ---
 
@@ -361,7 +354,7 @@ WAZUH_AGENT_NAME='Linux-client' \
 dpkg -i ./wazuh-agent_4.7.5-1_amd64.deb
 ```
 
-![Installation agent Linux](media/image55.png)
+![Installation agent Linux](images/Installation_agent_Linux.png)
 
 ✅ **Wazuh Agent installé avec succès sur Linux-Client**
 
@@ -373,7 +366,7 @@ dpkg -i ./wazuh-agent_4.7.5-1_amd64.deb
 sudo systemctl daemon-reload
 ```
 
-![Daemon reload](media/image56.png)
+![Daemon reload](images/Daemon_reload.png)
 
 ---
 
@@ -383,7 +376,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 ```
 
-![Enable service](media/image57.png)
+![Enable service](images/Enable_service.png)
 
 ---
 
@@ -393,7 +386,7 @@ sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ```
 
-![Start service](media/image58.png)
+![Start service](images/Start_service.png)
 
 ---
 
@@ -403,7 +396,7 @@ sudo systemctl start wazuh-agent
 sudo systemctl status wazuh-agent
 ```
 
-![Statut agent Linux](media/image59.png)
+![Statut agent Linux](images/Statut_agent_Linux.png)
 
 ✅ **Agent Linux actif et connecté au serveur Wazuh**
 
@@ -411,9 +404,9 @@ sudo systemctl status wazuh-agent
 
 ### 3. Vérification dans le Dashboard
 
-![Agent Linux dans Dashboard](media/image60.png)
+![Agent Linux dans Dashboard](images/Agent_Linux_Dashboard.png)
 
-![Détails agent Linux](media/image61.png)
+![Détails agent Linux](images/Détails_agent_Linux.png)
 
 ✅ **L'agent Linux-client apparaît bien dans le Dashboard Wazuh**
 
@@ -429,7 +422,7 @@ sudo systemctl status wazuh-agent
 Commande : mstsc (Windows + R)
 ```
 
-![Commande mstsc](media/image62.png)
+![Commande mstsc](images/Commande_mstsc.png)
 
 ---
 
@@ -437,9 +430,9 @@ Commande : mstsc (Windows + R)
 
 **IP publique du Windows-Client** : `34.230.78.148`
 
-![Connexion RDP](media/image63.png)
+![Connexion RDP](images/Connexion_RDP.png)
 
-![Avertissement certificat](media/image64.png)
+![Avertissement certificat](images/Avertissement_certificat.png)
 
 ---
 
@@ -447,25 +440,25 @@ Commande : mstsc (Windows + R)
 
 #### Téléchargement de la paire de clés
 
-![Téléchargement clés Windows](media/image65.png)
+![Téléchargement clés Windows](images/Téléchargement_clés_Windows1.png)
 
 ---
 
 #### Déchiffrement du mot de passe
 
-![Décryption mot de passe](media/image66.png)
+![Décryption mot de passe](images/Téléchargement_clés_Windows.png)
 
-![Mot de passe généré](media/image67.png)
+![Mot de passe généré](images/Mot_de_passe_généré.png)
 
 ---
 
 #### Authentification RDP
 
-![Saisie mot de passe](media/image68.png)
+![Saisie mot de passe](images/Saisie_MDP.png)
 
-![Chargement session](media/image69.png)
+![Chargement session](images/Chargement_session.png)
 
-![Windows Server démarré](media/image70.png)
+![Windows Server démarré](images/Windows_Server_démarré.png)
 
 ✅ **Connexion réussie au Windows Server**
 
@@ -473,19 +466,20 @@ Commande : mstsc (Windows + R)
 
 ### 3. Installation de l'agent Wazuh sur Windows
 
-![Configuration agent Windows](media/image71.png)
+![Configuration agent Windows](images/Configuration_agent_Windows.png)
+![Configuration agent Windows](images/Configuration_agent_Windows1.png)
 
-![Commandes PowerShell](media/image72.png)
 
-![Script d'installation](media/image73.png)
+![Commandes PowerShell](images/Commandes_PowerShel.png)
 
-![Installation en cours](media/image74.png)
+![Script d'installation](images/Script_installation.png)
+
 
 ---
 
 #### Exécution dans PowerShell (Admin)
 
-![PowerShell Admin](media/image75.png)
+![PowerShell Admin](images/Installation_encours.png)
 
 ✅ **Agent Wazuh installé avec succès sur Windows-Client**
 
@@ -493,9 +487,8 @@ Commande : mstsc (Windows + R)
 
 ### 4. Vérification dans le Dashboard
 
-![Agent Windows dans Dashboard](media/image76.png)
+![Agent Windows dans Dashboard](images/Agent_Windows_Dashboard.png)
 
-![Détails agent Windows](media/image77.png)
 
 ✅ **Les deux agents (Linux et Windows) sont maintenant enrôlés et actifs**
 
@@ -511,11 +504,11 @@ Commande : mstsc (Windows + R)
 ssh fakeuser@172.31.26.179
 ```
 
-![Tentatives SSH](media/image78.png)
+![Tentatives SSH](images/Tentatives_SSH.png)
 
 **Résultat dans Wazuh** :
 
-![Alertes brute force SSH](media/image79.png)
+![Alertes brute force SSH](images/Alertes_brute_SSH.png)
 
 ✅ **Wazuh détecte les tentatives d'authentification SSH échouées**
 
@@ -527,11 +520,11 @@ ssh fakeuser@172.31.26.179
 sudo su
 ```
 
-![Élévation privilèges](media/image80.png)
+![Élévation privilèges](images/Élévation_privilèges.png)
 
 **Alerte Wazuh** :
 
-![Alerte sudo](media/image81.png)
+![Alerte sudo](images/Alerte_sudo.png)
 
 ✅ **Wazuh détecte l'utilisation de sudo et l'élévation de privilèges**
 
@@ -543,11 +536,11 @@ sudo su
 echo "test" | sudo tee -a /etc/passwd
 ```
 
-![Modification /etc/passwd](media/image82.png)
+![Modification /etc/passwd](images/Modification_etc_passwd.png)
 
 **Alerte FIM (File Integrity Monitoring)** :
 
-![Alerte FIM](media/image83.png)
+![Alerte FIM](images/Alerte_FIM.png)
 
 ✅ **Wazuh détecte la modification du fichier sensible /etc/passwd**
 
@@ -559,15 +552,14 @@ echo "test" | sudo tee -a /etc/passwd
 
 **Action** : Tentatives de connexion RDP avec mauvais mot de passe (5 fois)
 
-![Tentatives RDP échouées](media/image84.png)
+![Tentatives RDP échouées](images/Tentatives_RDP_échouées.png)
 
-![Logon failed](media/image85.png)
+![Logon failed](images/Logon_failed.png)
 
 **Alertes dans Wazuh** :
 
-![Filtrage par agent Windows](media/image86.png)
 
-![Alertes échecs authentification](media/image87.png)
+![Alertes échecs authentification](images/Alertes_échecs_authentification.png)
 
 ✅ **Wazuh détecte les tentatives d'authentification RDP échouées (Event ID 4625)**
 
@@ -580,11 +572,11 @@ net user labuser P@ssw0rd! /add
 net localgroup administrators labuser /add
 ```
 
-![Création utilisateur](media/image88.png)
+![Création utilisateur](images/Création_utilisateur.png)
 
 **Alerte Wazuh** :
 
-![Alerte création utilisateur](media/image89.png)
+![Alerte création utilisateur](images/Alerte_création_utilisateur.png)
 
 ✅ **Wazuh détecte la création d'un nouvel utilisateur et son ajout au groupe Administrateurs**
 
@@ -601,9 +593,9 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-
 C:\Sysmon\Sysmon64.exe -accepteula -i C:\Sysmon\sysmonconfig.xml
 ```
 
-![Installation Sysmon](media/image90.png)
+![Installation Sysmon](images/Installation_Sysmon.png)
 
-![Sysmon installé](media/image91.png)
+![Sysmon installé](images/Sysmon_installé.png)
 
 ✅ **Sysmon installé et configuré pour une supervision EDR enrichie**
 
