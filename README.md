@@ -640,8 +640,3 @@ Ce projet constitue une **expérience pratique enrichissante** et une **base sol
 - [AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/)
 - [Sysmon Documentation](https://docs.microsoft.com/sysinternals/downloads/sysmon)
 
----
-
-**Département Mathématique et Informatique**  
-**Filière : II-BDCC**  
-**Projet : Architecture Cloud - Sécurité des Endpoints et Supervision SIEM**
